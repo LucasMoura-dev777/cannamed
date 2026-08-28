@@ -4,3 +4,18 @@ O Cannamed e uma aplicacao web desenvolvida como projeto semestral do curso de A
 
 O principal objetivo do Cannavita e centralizar essas funcoes em uma unica plataforma, tornando o processo de agendamento e acompanhamento das consultas mais pratico e organizado. Dessa forma, o projeto busca atender pacientes que procuram profissionais para consultas, profissionais que precisam gerenciar seus atendimentos e administradores responsaveis pelo funcionamento e controle da plataforma.
 
+
+Funcionalidades Parte 2:
+
+Histórico de consultas;
+Registro básico de acompanhamento;
+Dashboards personalizados;
+Área administrativa;
+Controle de acesso de acordo com o tipo de usuário.
+
+Tecnologias Parte 2
+O projeto será desenvolvido utilizando:
+
+HTML5
+CSS3
+JavaScript
