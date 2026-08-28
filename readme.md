@@ -17,3 +17,18 @@ Java
 Banco de dados
 Bootstrap
 
+
+Funcionalidades Parte 2:
+
+Histórico de consultas;
+Registro básico de acompanhamento;
+Dashboards personalizados;
+Área administrativa;
+Controle de acesso de acordo com o tipo de usuário.
+
+Tecnologias Parte 2
+O projeto será desenvolvido utilizando:
+
+HTML5
+CSS3
+JavaScript
