@@ -1,0 +1,26 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Maven
+target/
+**/target/
+
+# Banco H2 local
+data/
+**/data/
+*.mv.db
+*.trace.db
+
+# Java
+*.class
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
