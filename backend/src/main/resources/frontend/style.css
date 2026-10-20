@@ -1,0 +1,81 @@
+
+:root {
+    --bg-dark-green: #0d4b33;
+    --text-bright-green: #4ade80;
+    --btn-bright-green: #5eead4;
+    --btn-bright-green-hover: #2dd4bf;
+    --bg-light-green: #e6f4f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark-green);
+}
+
+
+.custom-navbar {
+    background-color: var(--bg-dark-green);
+}
+
+.navbar-center-links .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.navbar-center-links .nav-link:hover,
+.navbar-center-links .nav-link.active {
+    color: #ffffff;
+}
+
+
+.btn-bright-green {
+    background-color: #55e055;
+    color: #0d4b33;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-bright-green:hover {
+    background-color: #42c742;
+    color: #052619;
+}
+
+.btn-outline-light-custom {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.btn-outline-light-custom:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+.hero-section {
+    min-height: calc(100vh - 80px);
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+
+.text-bright-green {
+    color: #55e055 !important;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.hero-image-wrapper img {
+    object-fit: cover;
+    max-height: 500px;
+}
+
