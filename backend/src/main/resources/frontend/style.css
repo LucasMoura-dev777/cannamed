@@ -79,4 +79,20 @@ body {
     max-height: 500px;
 }
 
+.bg-light-green {
+    background-color: #d1e7dd;
+}
+
+.text-dark-green {
+    color: var(--bg-dark-green);
+}
+
+.max-w-700 {
+    max-width: 700px;
+}
+
+.card-feature {
+    border-radius: 12px;
+    background-color: #ffffff;
+}
 
