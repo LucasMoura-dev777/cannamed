@@ -96,3 +96,58 @@ body {
     background-color: #ffffff;
 }
 
+
+.como-funciona-section {
+    background-color: #BDD8D1;
+    color: #0C4B35;
+}
+
+.como-funciona-section .section-title {
+    color: #0C4B35;
+    font-size: 2rem;
+}
+
+.como-funciona-section .section-subtitle {
+    color: #2D584A !important;
+    font-size: 1rem;
+}
+
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: #0B8B67;
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.step-title {
+    color: #0C4B35;
+    font-size: 1.15rem;
+}
+
+.step-desc {
+    color: #2D584A !important;
+    line-height: 1.4;
+}
+
+
+.btn-primary-custom {
+    background-color: #0B8B67;
+    border-color: #0B8B67;
+    color: #FFFFFF;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #08694E;
+    border-color: #08694E;
+    color: #FFFFFF;
+}
