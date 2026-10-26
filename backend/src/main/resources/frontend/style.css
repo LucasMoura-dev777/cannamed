@@ -152,7 +152,11 @@ body {
     color: #FFFFFF;
 }
 
+<<<<<<< HEAD
 /* Seção Profissionais em Destaque */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .profissionais-section {
     background-color: #dbe8e1;
     padding: 60px 40px 80px 40px;
@@ -176,14 +180,22 @@ body {
     margin-bottom: 40px;
 }
 
+<<<<<<< HEAD
 /* Grid de Cartões */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .profissionais-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
+<<<<<<< HEAD
 /* Cartão Individual */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .profissional-card {
     background-color: #ffffff;
     border-radius: 12px;
@@ -194,7 +206,11 @@ body {
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 /* Cabeçalho do Cartão (Avatar + Nome) */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .card-header {
     display: flex;
     align-items: center;
@@ -224,7 +240,10 @@ body {
     line-height: 1.3;
 }
 
+<<<<<<< HEAD
 /* Corpo das informações */
+=======
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .card-body {
     display: flex;
     flex-direction: column;
@@ -242,7 +261,11 @@ body {
     margin-top: 4px;
 }
 
+<<<<<<< HEAD
 /* Rodapé do Cartão (Preço + Botão) */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .card-footer {
     display: flex;
     align-items: center;
@@ -271,7 +294,11 @@ body {
     background-color: #08291f;
 }
 
+<<<<<<< HEAD
 /* Responsividade para ecrãs menores */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 @media (max-width: 1024px) {
     .profissionais-grid {
         grid-template-columns: repeat(2, 1fr);

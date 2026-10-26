@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Reset Básico */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +17,11 @@ body {
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 /* Navbar */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .navbar {
     background-color: #0d382c;
     height: 60px;
@@ -68,7 +76,11 @@ body {
     font-weight: 600;
 }
 
+<<<<<<< HEAD
 /* Container Principal */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .main-container {
     flex: 1;
     padding: 50px 40px;
@@ -86,7 +98,11 @@ body {
     align-items: start;
 }
 
+<<<<<<< HEAD
 /* Card Esquerdo: Detalhes do Médico */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .card-medico-detalhe {
     background-color: #ffffff;
     border-radius: 12px;
@@ -145,7 +161,11 @@ body {
     line-height: 1.5;
 }
 
+<<<<<<< HEAD
 /* Grid interna para Atendimento e Valor */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .detalhes-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -173,7 +193,11 @@ body {
     font-weight: 700;
 }
 
+<<<<<<< HEAD
 /* Card Direito: Agendar Consulta */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .card-agendar {
     background-color: #ffffff;
     border-radius: 12px;
@@ -216,7 +240,11 @@ body {
     background-color: #09281f;
 }
 
+<<<<<<< HEAD
 /* Responsividade */
+=======
+
+>>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 @media (max-width: 860px) {
     .perfil-layout {
         grid-template-columns: 1fr;
