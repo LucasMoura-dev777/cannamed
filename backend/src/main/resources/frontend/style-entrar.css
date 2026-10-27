@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/* Reset Básico */
-=======
 
->>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 * {
     margin: 0;
     padding: 0;
@@ -17,11 +13,7 @@ body {
     flex-direction: column;
 }
 
-<<<<<<< HEAD
-/* Navbar */
-=======
 
->>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .navbar {
     background-color: #0d382c;
     height: 60px;
@@ -76,11 +68,7 @@ body {
     font-weight: 600;
 }
 
-<<<<<<< HEAD
-/* Container Central */
-=======
 
->>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .main-container {
     flex: 1;
     display: flex;
@@ -89,11 +77,7 @@ body {
     padding: 40px 20px;
 }
 
-<<<<<<< HEAD
-/* Card Branco de Login */
-=======
 
->>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .card-login {
     background-color: #ffffff;
     width: 100%;
@@ -111,11 +95,7 @@ body {
     margin-bottom: 35px;
 }
 
-<<<<<<< HEAD
-/* Formulário de Login */
-=======
 
->>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .form-login {
     display: flex;
     flex-direction: column;
@@ -172,11 +152,7 @@ body {
     background-color: #09281f;
 }
 
-<<<<<<< HEAD
-/* Footer do Form */
-=======
 
->>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 .login-footer {
     text-align: center;
     margin-top: 24px;
@@ -195,11 +171,7 @@ body {
     text-decoration: underline;
 }
 
-<<<<<<< HEAD
-/* Responsividade */
-=======
 
->>>>>>> 4de74aecc96f86973fd8dd0081cedb20d0dd8640
 @media (max-width: 640px) {
     .card-login {
         padding: 30px 20px;
