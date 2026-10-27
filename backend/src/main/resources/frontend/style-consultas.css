@@ -1,0 +1,165 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #dbe8e1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar {
+    background-color: #0d382c;
+    height: 60px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #4ade80;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #4ade80;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-login {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-register-nav {
+    background-color: #4ade80;
+    color: #0b2920;
+    text-decoration: none;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+.main-container {
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.consultas-wrapper {
+    width: 100%;
+    max-width: 850px;
+    margin-left: 40px;
+}
+
+.page-title {
+    color: #0d382c;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+
+.card-consulta {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 24px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.avatar-circle {
+    background-color: #00875a;
+    color: #ffffff;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.consulta-info {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    flex: 1;
+    margin-left: 35px;
+}
+
+.info-item {
+    color: #111827;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+
+.btn-cancelar {
+    background-color: #ffffff;
+    color: #ff4d4d;
+    border: 1.5solid #ff4d4d;
+    border-radius: 10px;
+    padding: 10px 32px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-cancelar:hover {
+    background-color: #fff5f5;
+    border-color: #e60000;
+    color: #e60000;
+}
+
+
+@media (max-width: 768px) {
+    .consultas-wrapper {
+        margin-left: 0;
+    }
+    .card-consulta {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .consulta-info {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+    }
+}

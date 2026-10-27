@@ -1,0 +1,245 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #dbe8e1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar {
+    background-color: #0d382c;
+    height: 60px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #4ade80;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #4ade80;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-login {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-register-nav {
+    background-color: #4ade80;
+    color: #0b2920;
+    text-decoration: none;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+.main-container {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.agendar-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1fr;
+    gap: 25px;
+    width: 100%;
+    max-width: 1150px;
+    align-items: stretch;
+    margin-bottom: 40px;
+}
+
+
+.card-medico-resumo {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.medico-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.avatar-circle {
+    background-color: #00875a;
+    color: #ffffff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.medico-nome {
+    color: #111827;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.medico-detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.medico-detalhes p {
+    color: #374151;
+    font-size: 0.8rem;
+}
+
+.medico-preco span {
+    color: #0d7052;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+
+.card-datas {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.card-datas h3 {
+    color: #111827;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.datas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+
+.card-horarios {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.card-horarios h3 {
+    color: #111827;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.horarios-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.btn-opcao {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.btn-opcao:hover {
+    border-color: #0d382c;
+}
+
+.btn-opcao.active {
+    border-color: #0d382c;
+    background-color: #f0fdf4;
+    color: #0d382c;
+    font-weight: 600;
+}
+
+
+.confirmar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-confirmar {
+    background-color: #0d382c;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    max-width: 380px;
+    padding: 14px 0;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 56, 44, 0.2);
+}
+
+.btn-confirmar:hover {
+    background-color: #09281f;
+}
+
+
+@media (max-width: 900px) {
+    .agendar-layout {
+        grid-template-columns: 1fr;
+    }
+}
