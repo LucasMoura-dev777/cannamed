@@ -3,45 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CANNAMED - Entrar no CANNAMED</title>
+    <title>CANNAMED - Entrar</title>
     <link rel="stylesheet" href="style-entrar.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-
-<header class="navbar">
-    <div class="logo">
-        CANNAMED
-    </div>
-    <nav class="nav-links">
-        <a href="index.html">Início</a>
-        <a href="#">Consultas</a>
-        <a href="#">Sobre</a>
-        <a href="#">Profissionais</a>
-    </nav>
-    <div class="auth-buttons">
-        <a href="entrar.html" class="btn-login">Entrar</a>
-        <a href="cadastro.html" class="btn-register-nav">Criar conta</a>
-    </div>
-</header>
+<div class="main-container">
+    <div class="card-entrar">
+        <h1 class="title">Entrar no Cannamed</h1>
+        <p class="subtitle">Insira o seu e-mail e senha para aceder</p>
 
 
-<main class="main-container">
-    <div class="card-login">
-        <h1 class="title">Entrar no CANNAMED</h1>
-
-        <form action="#" method="POST" class="form-login">
+        <form action="index.html" method="POST" id="form-login" class="form-grid">
             <div class="form-group">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Seu@email.com" required>
+                <input type="email" id="email" name="email" required>
             </div>
 
             <div class="form-group">
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="*****" required>
+                <input type="password" id="senha" name="senha" required>
             </div>
 
             <div class="form-submit">
@@ -50,10 +31,23 @@
         </form>
 
         <div class="login-footer">
-            Ainda não tem uma conta ? <a href="cadastro.html">Cadastre-se</a>
+            Ainda não tem conta? <a href="cadastro.html">Criar conta</a>
         </div>
     </div>
-</main>
+</div>
+
+
+<script>
+    document.getElementById('form-login').addEventListener('submit', function(event) {
+        const email = document.getElementById('email').value.trim();
+        const senha = document.getElementById('senha').value.trim();
+
+        if (!email || !senha) {
+            alert('Por favor, preencha todos os campos antes de continuar.');
+            event.preventDefault(); // Impede o envio se estiver vazio
+        }
+    });
+</script>
 
 </body>
 </html>

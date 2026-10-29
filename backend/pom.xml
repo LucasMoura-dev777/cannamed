@@ -13,7 +13,7 @@
         <maven.compiler.source>27</maven.compiler.source>
         <maven.compiler.target>27</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <failOnMissingWebXml>false</failOnMissingWebXml> <!-- Adiciona esta linha -->
+        <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
 
 
@@ -27,7 +27,7 @@
 
     <build>
         <plugins>
-            <!-- Outros plugins que já tenhas vão aqui -->
+
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -38,7 +38,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Plugin do Tomcat que já tinhas -->
+
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
