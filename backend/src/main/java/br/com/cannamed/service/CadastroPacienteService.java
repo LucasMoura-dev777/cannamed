@@ -10,19 +10,20 @@ import br.com.cannamed.util.Conexao;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class CadastroPacienteService {
 
     public void cadastrar(
             String nome,
             String email,
-            String senhaHash,
+            String senha,
             String cpf,
             LocalDate nascimento) throws SQLException {
 
         if (nome == null || nome.isBlank()
                 || email == null || email.isBlank()
-                || senhaHash == null || senhaHash.isBlank()
+                || senha == null || senha.length() < 8
                 || cpf == null || !cpf.matches("\\d{11}")
                 || nascimento == null
                 || nascimento.isAfter(LocalDate.now())) {
@@ -38,7 +39,7 @@ public class CadastroPacienteService {
                 Usuario usuario = new Usuario(
                         nome,
                         email,
-                        senhaHash,
+                        BCrypt.hashpw(senha, BCrypt.gensalt(10)),
                         null,
                         "PACIENTE",
                         "ATIVO"
