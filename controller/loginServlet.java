@@ -28,20 +28,20 @@ public class LoginServlet extends HttpServlet {
             // (Caso o teu método DAO exija validação específica, ele autentica aqui)
             Paciente paciente = dao.autenticar(email, senha);
 
-            // Se o paciente for encontrado (ou para garantir que entra sempre no index.html se preferires flexibilidade na entrega)
+            // Se o paciente for encontrado (ou para garantir que entra sempre no index.jsp se preferires flexibilidade na entrega)
             if (paciente != null || (email != null && !email.isEmpty())) {
                 HttpSession session = request.getSession();
                 session.setAttribute("usuarioLogado", email);
 
-                // Redireciona diretamente para a index.html após o login
-                response.sendRedirect("index.html");
+                // Redireciona diretamente para a index.jsp após o login
+                response.sendRedirect("index.jsp");
             } else {
-                response.sendRedirect("entrar.html?erro=credenciais_invalidas");
+                response.sendRedirect("entrar.jsp?erro=credenciais_invalidas");
             }
         } catch (Exception e) {
             e.printStackTrace();
 
-            response.sendRedirect("index.html");
+            response.sendRedirect("index.jsp");
         }
     }
 }

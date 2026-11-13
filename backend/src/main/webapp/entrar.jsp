@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,7 +13,6 @@
     <div class="card-entrar">
         <h1 class="title">Entrar no Cannamed</h1>
         <p class="subtitle">Insira o seu e-mail e senha para aceder</p>
-
 
         <form action="login-paciente" method="POST" id="form-login" class="form-grid">
             <div class="form-group">
@@ -30,12 +30,12 @@
             </div>
         </form>
 
-        <p id="feedback" style="color:#a72d37;text-align:center"></p><div class="login-footer">
-            Ainda não tem conta? <a href="cadastro.html">Criar conta</a>
+        <p id="feedback" style="color:#a72d37;text-align:center"></p>
+        <div class="login-footer">
+            Ainda não tem conta? <a href="cadastro.jsp">Criar conta</a>
         </div>
     </div>
 </div>
-
 
 <script>
     document.getElementById('form-login').addEventListener('submit', function(event) {
@@ -44,10 +44,15 @@
 
         if (!email || !senha) {
             alert('Por favor, preencha todos os campos antes de continuar.');
-            event.preventDefault(); // Impede o envio se estiver vazio
+            event.preventDefault();
         }
     });
 </script>
 
-<script>if(new URLSearchParams(location.search).has("erro"))document.getElementById("feedback").textContent="E-mail ou senha inválidos.";</script></body>
+<script>
+    if(new URLSearchParams(location.search).has("erro")) {
+        document.getElementById("feedback").textContent = "E-mail ou senha inválidos.";
+    }
+</script>
+</body>
 </html>

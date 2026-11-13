@@ -37,10 +37,10 @@ public class CadastroServlet extends HttpServlet {
             pacienteDAO.inserir(paciente);
 
 
-            response.sendRedirect("entrar.html?sucesso=cadastro");
+            response.sendRedirect("entrar.jsp?sucesso=cadastro");
         } catch (Exception e) {
             e.printStackTrace();
-            response.sendRedirect("cadastro.html?erro=falha");
+            response.sendRedirect("cadastro.jsp?erro=falha");
         }
     }
 }

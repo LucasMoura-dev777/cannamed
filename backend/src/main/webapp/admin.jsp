@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,32 +12,28 @@
 </head>
 <body>
 
-
 <header class="navbar">
-    <a href="index.html" class="logo">
+    <a href="index.jsp" class="logo">
         CANNAMED
     </a>
     <nav class="nav-links">
-        <a href="index.html">Início</a>
-        <a href="minhas-consultas.html">Consultas</a>
+        <a href="index.jsp">Início</a>
+        <a href="minhas-consultas.jsp">Consultas</a>
         <a href="#">Sobre</a>
         <a href="#">Profissionais</a>
     </nav>
     <div class="auth-buttons">
-        <a href="entrar.html" class="btn-login">Sair</a>
+        <a href="entrar.jsp" class="btn-login">Sair</a>
     </div>
 </header>
 
-
 <main class="admin-container">
     <div class="admin-wrapper">
-
 
         <div class="admin-header-title">
             <h1>Painel administrativo</h1>
             <p>Visão geral do sistema</p>
         </div>
-
 
         <div class="metrics-grid">
             <div class="metric-card">
@@ -60,14 +57,14 @@
             </div>
         </div>
 
-
         <div class="consultas-panel-card">
             <h2>Consultas:</h2>
-
         </div>
 
     </div>
 </main>
 
-<p style="text-align:center;padding:25px"><a href="pacientes">Gerenciar pacientes (CRUD)</a></p></body>
+<p style="text-align:center;padding:25px"><a href="pacientes">Gerenciar pacientes (CRUD)</a></p>
+
+</body>
 </html>

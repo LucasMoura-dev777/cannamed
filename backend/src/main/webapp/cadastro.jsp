@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,14 +15,14 @@
 <header class="navbar">
     <div class="logo">CANNAMED</div>
     <nav class="nav-links">
-        <a href="index.html">Início</a>
-        <a href="minhas-consultas.html">Consultas</a>
+        <a href="index.jsp">Início</a>
+        <a href="minhas-consultas.jsp">Consultas</a>
         <a href="#">Sobre</a>
         <a href="#">Profissionais</a>
     </nav>
     <div class="auth-buttons">
-        <a href="entrar.html" class="btn-login">Entrar</a>
-        <a href="cadastro.html" class="btn-register-nav">Criar conta</a>
+        <a href="entrar.jsp" class="btn-login">Entrar</a>
+        <a href="cadastro.jsp" class="btn-register-nav">Criar conta</a>
     </div>
 </header>
 
@@ -29,7 +30,6 @@
     <div class="card-cadastro">
         <h1 class="title">Criar conta do paciente</h1>
         <p class="subtitle">Preencha seus dados para começar agendar uma consulta</p>
-
 
         <form action="cadastrar-paciente" method="POST" class="form-grid">
             <div class="form-group">
@@ -68,7 +68,7 @@
         </form>
 
         <div class="login-footer">
-            Já possui uma conta ? <a href="entrar.html">Entrar</a>
+            Já possui uma conta? <a href="entrar.jsp">Entrar</a>
         </div>
     </div>
 </main>
@@ -79,12 +79,9 @@
 
         if (senha !== confirmarSenha) {
             alert('As senhas não coincidem! Por favor, verifique.');
-            event.preventDefault(); // Impede o envio do formulário
+            event.preventDefault();
         }
     });
 </script>
 </body>
-
-
-
 </html>

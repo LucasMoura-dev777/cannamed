@@ -26,7 +26,7 @@ public class  PacientesServlet extends HttpServlet {
    if("criar".equals(action)){
     if(!p(req,"senha").equals(p(req,"confirmarSenha")))throw new IllegalArgumentException("Senhas diferentes");
     new CadastroPacienteService().cadastrar(p(req,"nome"),p(req,"email"),p(req,"senha"),p(req,"cpf").replaceAll("\\D",""),LocalDate.parse(p(req,"dataNascimento")));
-    redirect(res,"entrar.html","Cadastro realizado! Entre com sua conta.");return;
+    redirect(res,"entrar.jsp","Cadastro realizado! Entre com sua conta.");return;
    }
    if(!admin(req)){res.sendError(403,"Somente administradores podem alterar pacientes");return;}
    int id=Integer.parseInt(p(req,"id"));
@@ -49,6 +49,6 @@ public class  PacientesServlet extends HttpServlet {
     }catch(Exception e){c.rollback();throw e;}
    }
    redirect(res,"pacientes","Operação concluída");
-  }catch(Exception e){redirect(res,"erro.html",e.getMessage()==null?"Erro no cadastro":e.getMessage());}
+  }catch(Exception e){redirect(res,"erro.jsp",e.getMessage()==null?"Erro no cadastro":e.getMessage());}
  }
 }

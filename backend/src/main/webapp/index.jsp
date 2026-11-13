@@ -1,0 +1,233 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANNAMED - Especialistas em Cannabis Medicinal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar navbar-expand-lg custom-navbar py-3">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold fs-4" href="index.jsp">
+            <img src="logoSite.png" alt="CANNAMED Logo" height="36" class="bg-white p-1 rounded">
+            CANNAMED
+        </a>
+        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-center-links navbar-nav me-lg-4 align-items-center gap-3">
+                <li class="nav-item"><a class="nav-link active" href="index.jsp">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="minhas-consultas.jsp">Consultas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#profissionais">Profissionais</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                <a href="entrar.jsp" class="text-white text-decoration-none fw-medium me-2">Entrar</a>
+                <a href="cadastro.jsp" class="btn btn-bright-green">Criar conta</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="hero-section text-white d-flex align-items-center">
+    <div class="container py-5">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+                <h1 class="hero-title fw-bold mb-4">
+                    Encontre especialistas em <span class="text-bright-green">cannabis medicinal</span> e agende sua consulta
+                </h1>
+                <p class="hero-subtitle text-light opacity-75 mb-4 me-lg-4">
+                    O CANNAMED conecta pacientes a médicos habilitados para prescrição de tratamentos canabinoides. Busque, compare e agende de forma simples e segura.
+                </p>
+                <div class="d-flex flex-wrap gap-3 mb-5">
+                    <a href="#profissionais" class="btn btn-bright-green btn-lg px-4 py-2 me-2">Encontrar um profissional</a>
+                    <a href="cadastro.jsp" class="btn btn-outline-light-custom btn-lg px-4 py-2">Criar minha conta</a>
+                </div>
+                <div class="row g-4 pt-2">
+                    <div class="col-4">
+                        <h3 class="fw-bold mb-1">4</h3>
+                        <p class="text-light opacity-75 small mb-0">Profissionais</p>
+                    </div>
+                    <div class="col-4">
+                        <h3 class="fw-bold mb-1">+1.200</h3>
+                        <p class="text-light opacity-75 small mb-0">Consultas realizadas</p>
+                    </div>
+                    <div class="col-4">
+                        <h3 class="fw-bold mb-1">4.8</h3>
+                        <p class="text-light opacity-75 small mb-0">Avaliação médica</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image-wrapper">
+                    <img src="medico.png" alt="Consulta com especialista CANNAMED" class="img-fluid rounded-4 shadow-lg w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sobre" class="bg-light-green py-5">
+    <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5">
+            <h2 class="fw-bold text-dark-green mb-3">Sobre o CANNAMED</h2>
+            <p class="text-secondary">
+                Uma plataforma que aproxima pacientes de profissionais de saúde especializados, tornando o acesso ao tratamento com cannabis medicinal mais seguro, transparente e organizado.
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card card-feature h-100 p-4 border-0 shadow-sm text-center">
+                    <h5 class="fw-bold text-dark-green mb-3">Profissionais Verificados</h5>
+                    <p class="text-muted small mb-0">Todos os médicos possuem registro profissional válido e são aprovados pela administração.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-feature h-100 p-4 border-0 shadow-sm text-center">
+                    <h5 class="fw-bold text-dark-green mb-3">Agendamento Simples</h5>
+                    <p class="text-muted small mb-0">Escolha data e horário disponíveis e confirme sua consulta em poucos cliques.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-feature h-100 p-4 border-0 shadow-sm text-center">
+                    <h5 class="fw-bold text-dark-green mb-3">Histórico Organizado</h5>
+                    <p class="text-muted small mb-0">Acompanhe suas consultas, diagnósticos e recomendações em um só lugar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="como-funciona-section">
+    <div class="container py-4 text-center">
+        <h2 class="section-title fw-bold">Como funciona</h2>
+        <p class="section-subtitle text-muted mb-5">Quatro passos para iniciar seu acompanhamento</p>
+        <div class="row g-4 justify-content-center mb-5">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="step-card h-100 p-3">
+                    <div class="step-number mx-auto mb-3">1</div>
+                    <h5 class="step-title fw-bold mb-2">Busque</h5>
+                    <p class="step-desc text-muted small">Pesquise profissionais por nome, especialidade.</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="step-card h-100 p-3">
+                    <div class="step-number mx-auto mb-3">2</div>
+                    <h5 class="step-title fw-bold mb-2">Compare</h5>
+                    <p class="step-desc text-muted small">Veja perfil, experiência, avaliações e valor da consulta.</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="step-card h-100 p-3">
+                    <div class="step-number mx-auto mb-3">3</div>
+                    <h5 class="step-title fw-bold mb-2">Agende</h5>
+                    <p class="step-desc text-muted small">Faça login, escolha a data e horário e confirme.</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="step-card h-100 p-3">
+                    <div class="step-number mx-auto mb-3">4</div>
+                    <h5 class="step-title fw-bold mb-2">Acompanhe</h5>
+                    <p class="step-desc text-muted small">Gerencie consultas e acesse seu histórico.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a href="cadastro.jsp" class="btn btn-primary-custom px-4 py-2 fw-semibold">Começar agora</a>
+        </div>
+    </div>
+</section>
+
+<section id="profissionais" class="profissionais-section">
+    <div class="profissionais-container">
+        <h2 class="profissionais-title">Profissionais em destaque</h2>
+        <p class="profissionais-subtitle">Profissionais disponíveis na plataforma</p>
+
+        <div class="profissionais-grid">
+
+            <!-- Dr. Thiago Felipe -->
+            <div class="profissional-card">
+                <div class="card-header">
+                    <div class="avatar-circle">TF</div>
+                    <h3 class="medico-nome">Dr. Thiago Felipe</h3>
+                </div>
+                <div class="card-body">
+                    <p class="info-line">CRM : 123456</p>
+                    <p class="info-line">São Paulo - Interlagos</p>
+                    <p class="info-line">Avaliação : 5.0</p>
+                    <p class="info-line especialidade">Especialidade: Epilepsia</p>
+                </div>
+                <div class="card-footer">
+                    <span class="preco">R$ 100,00</span>
+                    <a href="perfil.jsp?medico=thiago" class="btn-ver-perfil">Ver perfil</a>
+                </div>
+            </div>
+
+            <!-- Dr. Daniel Oliveira -->
+            <div class="profissional-card">
+                <div class="card-header">
+                    <div class="avatar-circle">DO</div>
+                    <h3 class="medico-nome">Dr. Daniel Oliveira</h3>
+                </div>
+                <div class="card-body">
+                    <p class="info-line">CRM : 123456</p>
+                    <p class="info-line">São Paulo - Jd. São Luís</p>
+                    <p class="info-line">Avaliação : 5.0</p>
+                    <p class="info-line especialidade">Especialidade: Clínica Geral</p>
+                </div>
+                <div class="card-footer">
+                    <span class="preco">R$ 100,00</span>
+                    <a href="perfil.jsp?medico=daniel" class="btn-ver-perfil">Ver perfil</a>
+                </div>
+            </div>
+
+            <!-- Dr. Matheus Medeiros -->
+            <div class="profissional-card">
+                <div class="card-header">
+                    <div class="avatar-circle">MM</div>
+                    <h3 class="medico-nome">Dr. Matheus Medeiros</h3>
+                </div>
+                <div class="card-body">
+                    <p class="info-line">CRM : 123456</p>
+                    <p class="info-line">São Paulo - Grajaú</p>
+                    <p class="info-line">Avaliação : 5.0</p>
+                    <p class="info-line especialidade">Especialidade: Dor Crônica</p>
+                </div>
+                <div class="card-footer">
+                    <span class="preco">R$ 100,00</span>
+                    <a href="perfil.jsp?medico=matheus" class="btn-ver-perfil">Ver perfil</a>
+                </div>
+            </div>
+
+            <!-- Dr. Lucas Moura -->
+            <div class="profissional-card">
+                <div class="card-header">
+                    <div class="avatar-circle">LM</div>
+                    <h3 class="medico-nome">Dr. Lucas Moura</h3>
+                </div>
+                <div class="card-body">
+                    <p class="info-line">CRM : 123456</p>
+                    <p class="info-line">São Paulo - Interlagos</p>
+                    <p class="info-line">Avaliação : 5.0</p>
+                    <p class="info-line especialidade">Especialidade: Neurologia</p>
+                </div>
+                <div class="card-footer">
+                    <span class="preco">R$ 100,00</span>
+                    <a href="perfil.jsp?medico=lucas" class="btn-ver-perfil">Ver perfil</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
