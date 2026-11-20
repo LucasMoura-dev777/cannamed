@@ -31,6 +31,9 @@
     String totalUsuarios = "-";
     boolean erroAoCarregar = false;
     List<String[]> consultas = new ArrayList<>();
+    List<String[]> usuarios = new ArrayList<>();
+
+    String mensagem = request.getParameter("msg");
 
     String sqlTotais = "SELECT "
             + "(SELECT COUNT(*) FROM pacientes p "
@@ -45,6 +48,11 @@
             + "JOIN pacientes p ON p.id_paciente = c.id_paciente "
             + "JOIN usuarios u ON u.id_usuario = p.id_usuario "
             + "ORDER BY c.id_consulta DESC";
+
+    String sqlUsuarios = "SELECT id_usuario, nome, email, "
+            + "tipo_usuario, status "
+            + "FROM usuarios "
+            + "ORDER BY id_usuario";
 
     try (Connection conexao = Conexao.conectar()) {
 
@@ -70,6 +78,21 @@
                         resultado.getString("medico_nome"),
                         resultado.getString("data_consulta"),
                         resultado.getString("horario")
+                });
+            }
+        }
+
+        try (
+                PreparedStatement comando = conexao.prepareStatement(sqlUsuarios);
+                ResultSet resultado = comando.executeQuery()
+        ) {
+            while (resultado.next()) {
+                usuarios.add(new String[] {
+                        resultado.getString("id_usuario"),
+                        resultado.getString("nome"),
+                        resultado.getString("email"),
+                        resultado.getString("tipo_usuario"),
+                        resultado.getString("status")
                 });
             }
         }
@@ -109,6 +132,7 @@
     <nav class="nav-links">
         <a href="index.jsp">Início</a>
         <a href="#consultas">Consultas</a>
+        <a href="#usuarios">Usuários</a>
         <a href="#">Sobre</a>
         <a href="#">Profissionais</a>
     </nav>
@@ -125,6 +149,10 @@
             <h1>Painel administrativo</h1>
             <p>Visão geral do sistema</p>
         </div>
+
+        <% if (mensagem != null && !mensagem.isBlank()) { %>
+            <p><%= escapar(mensagem) %></p>
+        <% } %>
 
         <% if (erroAoCarregar) { %>
             <p>Não foi possível carregar os dados do painel.</p>
@@ -168,8 +196,7 @@
                         <tr style="text-align: left; border-bottom: 2px solid #0d3b2e;">
                             <th style="padding: 8px;">Paciente</th>
                             <th style="padding: 8px;">Profissional</th>
-                            <th style="padding: 8px;">Data</th>
-                            <th style="padding: 8px;">Horário</th>
+                            <th style="padding: 8px;">Data, horário e ações</th>
                         </tr>
                     </thead>
 
@@ -178,8 +205,84 @@
                             <tr style="border-bottom: 1px solid #d5e0db;">
                                 <td style="padding: 8px;"><%= escapar(consulta[1]) %></td>
                                 <td style="padding: 8px;"><%= escapar(consulta[2]) %></td>
-                                <td style="padding: 8px;"><%= escapar(consulta[3]) %></td>
-                                <td style="padding: 8px;"><%= escapar(consulta[4]) %></td>
+                                <td style="padding: 8px;">
+                                    <form
+                                        action="<%= request.getContextPath() %>/admin-consultas"
+                                        method="POST"
+                                        style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0;"
+                                    >
+                                        <input type="hidden" name="idConsulta" value="<%= escapar(consulta[0]) %>">
+
+                                        <input
+                                            type="text"
+                                            name="dataConsulta"
+                                            value="<%= escapar(consulta[3]) %>"
+                                            maxlength="5"
+                                            placeholder="dd/mm"
+                                            required
+                                            style="width: 80px;"
+                                        >
+
+                                        <input
+                                            type="text"
+                                            name="horario"
+                                            value="<%= escapar(consulta[4]) %>"
+                                            maxlength="5"
+                                            placeholder="hh:mm"
+                                            required
+                                            style="width: 70px;"
+                                        >
+
+                                        <button type="submit" name="acao" value="editar">
+                                            Salvar
+                                        </button>
+
+                                        <button
+                                            type="submit"
+                                            name="acao"
+                                            value="excluir"
+                                            onclick="return confirm('Tem certeza que deseja excluir esta consulta?')"
+                                        >
+                                            Excluir
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+
+            <% } %>
+        </div>
+
+        <div class="consultas-panel-card" id="usuarios" style="margin-top: 25px;">
+            <h2>Usuários cadastrados:</h2>
+
+            <% if (usuarios.isEmpty()) { %>
+
+                <p>Nenhum usuário cadastrado.</p>
+
+            <% } else { %>
+
+                <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                    <thead>
+                        <tr style="text-align: left; border-bottom: 2px solid #0d3b2e;">
+                            <th style="padding: 8px;">ID</th>
+                            <th style="padding: 8px;">Nome</th>
+                            <th style="padding: 8px;">E-mail</th>
+                            <th style="padding: 8px;">Tipo</th>
+                            <th style="padding: 8px;">Situação</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% for (String[] usuario : usuarios) { %>
+                            <tr style="border-bottom: 1px solid #d5e0db;">
+                                <td style="padding: 8px;"><%= escapar(usuario[0]) %></td>
+                                <td style="padding: 8px;"><%= escapar(usuario[1]) %></td>
+                                <td style="padding: 8px;"><%= escapar(usuario[2]) %></td>
+                                <td style="padding: 8px;"><%= escapar(usuario[3]) %></td>
+                                <td style="padding: 8px;"><%= escapar(usuario[4]) %></td>
                             </tr>
                         <% } %>
                     </tbody>
