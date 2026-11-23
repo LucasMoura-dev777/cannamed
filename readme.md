@@ -60,3 +60,4 @@ CSS3 / Style.css: Estilização personalizada do layout visual da aplicação.
 ![Entrar](/img/Entrar.png)
 ![Cadastrar](/img/Cadastrar.png)
 ![Admin](/img/Admin.png)
+![brmodelo](/img/Brmodelo.png)
